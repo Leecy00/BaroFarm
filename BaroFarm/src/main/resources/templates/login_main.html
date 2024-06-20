@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 회원 테이블에 admin 넣어서 회원이면 관리자 페이지로 넘어가는거  -->
+	<div class ="login">
+	<form action="">
+    아이디 : <input type="text" required placeholder="아이디" autofocus ><br>
+    비밀번호 : <input type="password" required placeholder="비밀번호" ><br>
+    
+    <button onclick="location.href='user_join'">회원 가입 </button>  
+    <!-- 회원가입 활성화 완료  -->
+    <input type="submit" value="로그인">
+  	<!--  autofocus 기능으로 마우스커서가 바로 나올수 있게, required로 필수입력항목으로 설정  -->
+	</form>
+	</div>
+	
+</body>
+</html>

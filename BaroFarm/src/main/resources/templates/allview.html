@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link th:href="@{/css/allview.css}" rel="stylesheet" type="text/css" />
+
+<body>
+
+	<font id="title"> 전체보기 </font>
+	<!--	<div class="product_cate">
+	  	<font class="product_cate_font"> 수산품</font>
+		</div><br>
+		<font class="product_middle">생선|해물|갑각류</font> -->
+
+	<hr class="hr">
+	<br>
+
+	<hr class="hr_1">
+
+	<div class="fish_table">
+		<div class="fish_table_row">
+			
+			<div class="fish_table_cell">
+				<p>번호</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>대분류</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>중분류</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>상품명</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>상품가격</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>원산지</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>재고</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>수정</p>
+			</div>
+			<div class="fish_table_cell">
+				<p>삭제</p>
+			</div>
+		</div>
+	</div>
+	
+	<hr class="hr_1">
+		
+		<div class="fish_table" th:each="p:${allList}">
+		
+		<div class="fish_table_row">
+			<div class="fish_table_cell" th:text="${p.product_no}">
+			</div>
+			<div class="fish_table_cell" th:text="${p.product_cate}">
+			</div>
+			<div class="fish_table_cell" th:text="${p.product_middle}">
+			</div>
+			<div class="fish_table_cell" th:text="${p.product_name}">
+			</div>
+			<div class="fish_table_cell" th:text="${#numbers.formatInteger(p.product_price,3,'COMMA')} +원 ">			
+			</div>
+			<div class="fish_table_cell" th:text="${p.product_origin}">
+			</div>
+			<div class="fish_table_cell" th:text="${p.product_stock} +개 ">
+			</div>
+			<div class="fish_table_cell">		
+			<a th:href="@{'/modify/' + ${p.product_no}}">수정</a></div>
+			<div class="fish_table_cell">
+			<a th:href="@{'/delete/' + ${p.product_no}}">삭제</a></div>
+		</div>
+		
+		<hr class="hr_2" align="center">
+	</div>
+
+</body>
+</html>

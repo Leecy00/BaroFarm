@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- css -->
+<link th:href="@{/css/modify.css}" rel="stylesheet" type="text/css"/>
+<!-- JS -->
+<script th:src="@{/js/home.js}" defer></script>
+
+<body>
+
+	<font class="title"> 상품 수정 </font>
+	<hr class="hr">
+
+	<form action="/modifySave" method="post">
+	
+	<label for="lang"><font class="cate_font">카테고리 대분류</font></label>
+		<select name="product_cate" th:value="${modiVo.product_cate}">
+		
+   			<option value="수산" th:selected="${modiVo.product_cate}=='수산'">수산</option>
+    		<option value="축산" th:selected="${modiVo.product_cate}=='축산'">축산</option>
+    		<option value="농산" th:selected="${modiVo.product_cate}=='농산'">채소</option>
+	    </select><br>
+	  	  
+	<label for="lang2"><font class="cate_font">카테고리 중분류</font></label>
+		<select name="product_middle" th:value="${modiVo.product_middle}" >
+   
+   		<option value="생선" th:selected="${modiVo.product_middle}=='생선'">생선</option>
+    	<option value="해물" th:selected="${modiVo.product_middle}=='해물'">해물</option>
+    	<option value="수산기타" th:selected="${modiVo.product_middle}=='수산기타'">수산기타</option>
+    	
+   		<option value="돼지" th:selected="${modiVo.product_middle}=='돼지'">돼지</option>
+    	<option value="소" th:selected="${modiVo.product_middle}=='소'">소</option>
+    	<option value="축산기타" th:selected="${modiVo.product_middle}=='축산기타'">축산기타</option>
+
+    	<option value="과일" th:selected="${modiVo.product_middle}=='과일'">과일</option>    
+    	<option value="채소" th:selected="${modiVo.product_middle}=='채소'">채소</option>
+	  	</select> <br>
+	  
+		<font class="contents">상품번호</font>		<input type ="text" name="product_no"  th:value="${modiVo.product_no}" readonly> <br> 
+		<font class="contents">상품명</font>		<input type ="text" name="product_name"  th:value="${modiVo.product_name}" > <br>
+		<font class="contents">상품가격</font>	<input type ="text" name="product_price"   th:value="${modiVo.product_price}"> <br>
+		<font class="contents">원산지</font>		<input type ="text" name="product_origin"  th:value="${modiVo.product_origin}"> <br>				
+		<font class="contents">재고</font> 		<input type ="text" name="product_stock"   th:value="${modiVo.product_stock}"> <br>				
+
+				<input type ="submit" value="상품수정">
+	</form>
+
+</body>
+</html>
