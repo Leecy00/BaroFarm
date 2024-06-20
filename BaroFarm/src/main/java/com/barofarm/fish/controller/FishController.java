@@ -62,4 +62,11 @@ public class FishController {
 		return "redirect:/allview";
 	}
 	
+	//마이페이지 개발중 - 담당자 meat
+	@GetMapping("/mypage")
+	public String mypage() {
+		
+		return "mypage";
+	}
+	
 }

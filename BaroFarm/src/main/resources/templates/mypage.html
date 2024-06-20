@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{css/mypage.css}">
+<link rel="stylesheet" type="text/css" th:href="@{css/AdminLayout.css}">
+<body>
+	<header th:replace="~{AdminLayout::header}"></header>
+	<nav th:replace="~{AdminLayout::nav}"></nav>
+	<article>
+		<h3>마이페이지</h3>
+		<h5>000님 안녕하세요</h5>
+	</article>
+		<aside>
+			<ul>
+				<div class="list">
+					<li><a th:href="@{#}">나의 정보 조회</a></li>
+					<li><a th:href="@{#}" class="second">회원정보 수정</a></li>
+				</div>
+				<div class="list">
+					<li><a th:href="@{#}">나의 쇼핑 정보</a></li>
+					<li><a th:href="@{#}" class="second">주문배송 조회</a></li>
+					<li><a th:href="@{#}" class="second">장바구니</a></li>
+				</div>
+				<div class="list">
+					<li><a th:href="@{#}">고객센터</a></li>
+					<li><a th:href="@{#}" class="second">공지사항</a></li>
+				</div>
+			</ul>
+		</aside>
+	<main>
+		<div id="title">회원정보 수정</div>
+	</main>
+</body>
+</html>
