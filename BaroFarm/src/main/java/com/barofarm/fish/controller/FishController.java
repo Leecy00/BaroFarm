@@ -69,4 +69,10 @@ public class FishController {
 		return "mypage";
 	}
 	
+	@GetMapping("/memberUpdate")
+	public String memberUpdate() {
+		
+		
+		return "mypage";
+	}
 }
