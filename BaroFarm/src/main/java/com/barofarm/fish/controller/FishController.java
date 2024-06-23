@@ -69,10 +69,29 @@ public class FishController {
 		return "mypage";
 	}
 	
+	//마이페이지 회원정보 수정시 update 작업해야함 -담당자 meat-
 	@GetMapping("/memberUpdate")
 	public String memberUpdate() {
 		
 		
 		return "mypage";
+	}
+	
+	@GetMapping("/order")
+	public String orderDelivery() {
+		
+		return "orderDelivery";
+	}
+	
+	@GetMapping("/basket")
+	public String basket() {
+		
+		return "basket";
+	}
+	
+	@GetMapping("/notice")
+	public String notice() {
+		
+		return "notice";
 	}
 }

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <link rel="stylesheet" type="text/css" th:href="@{css/mypage.css}">
 <link rel="stylesheet" type="text/css" th:href="@{css/UserLayout.css}">
-
 <body>
 	<header th:replace="~{UserLayout::header}"></header>
 	<nav th:replace="~{UserLayout::nav}"></nav>
@@ -35,26 +33,31 @@
 		</aside>
 		<div class="member">
 			<div class="containerorder">
-				<h4 id=text1>주문 배송 조회</h4>
-				<table border="1" id="membertb">
-					<thead>
-						<th>주문번호</th>
-						<th>상품정보</th>
-						<th>주문금액</th>
-					</thead>
-					<tbody>
-						<tr>
-						<td>123번</td>
-						<td>소고기</td>
-						<td>10000</td>						
-						</tr>
-						
-					</tbody>
-				</table>
-					
+				<h4 id=text1>장바구니</h4>
+				<form action="userbasket">
+					<table border="1" id="membertb">
+						<thead>
+							<th>상품정보</th>
+							<th>수량</th>
+							<th>주문금액</th>
+							<th>배송비</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>소고기</td> <!--product_no:상품번호  -->
+								<td>2</td> <!-- product_cnt:수량 -->
+								<td>10000</td> <!-- total_cnt:총 가격 -->
+								<td>3000</td> 
+							</tr>
+						</tbody>
+					</table>
+					<label for="order"></label> <input type="submit" id="order"
+						value="주문">
+				</form>
 			</div>
 		</div>
 	</main>
+<script type="text/js" th:href="@{js/barofarm}"></script>
 </body>
 
 </html>

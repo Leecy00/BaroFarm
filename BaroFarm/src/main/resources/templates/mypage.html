@@ -6,11 +6,10 @@
 	<title>Insert title here</title>
 </head>
 <link rel="stylesheet" type="text/css" th:href="@{css/mypage.css}">
-<link rel="stylesheet" type="text/css" th:href="@{css/AdminLayout.css}">
-
+<link rel="stylesheet" type="text/css" th:href="@{css/UserLayout.css}">
 <body>
-	<header th:replace="~{AdminLayout::header}"></header>
-	<nav th:replace="~{AdminLayout::nav}"></nav>
+	<header th:replace="~{UserLayout::header}"></header>
+	<nav th:replace="~{UserLayout::nav}"></nav>
 	<article>
 		<h3>마이페이지</h3>
 		<h5>000님 안녕하세요</h5>
@@ -42,11 +41,12 @@
 					<input type="password" placeholder="*****" name="user_pass">
 					<label>주소 정보</label>
 					<input type="text" placeholder="주소" name="address">
-					<button type="submit" class="btn">수정</button>
+					<button onclick="info()" type="submit" class="btn">수정</button>
 				</form>
 			</div>
 		</div>
 	</main>
 </body>
+<script type="text/js" th:href="@{js/barofarm.jsp}"></script>
 
 </html>
